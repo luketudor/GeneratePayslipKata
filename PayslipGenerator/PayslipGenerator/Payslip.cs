@@ -1,27 +1,22 @@
-﻿using System;
-
-namespace PayslipGenerator
+﻿namespace PayslipGenerator.Tests
 {
     public class Payslip
     {
-        private string firstName;
-        private string lastName;
-        private object annualSalary;
-        private object superRate;
-        private object paymentStartDate;
+        public string Name { get; }
+        public string PayPeriod { get; }
+        public int GrossIncome { get; }
+        public int IncomeTax { get; }
+        public int NetIncome { get; }
+        public int Super { get; }
 
-        public Payslip(string firstName, string lastName, object annualSalary, object superRate, object paymentStartDate)
+        public Payslip(string name, string payPeriod, int grossIncome, int incomeTax, int netIncome, int super)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.annualSalary = annualSalary;
-            this.superRate = superRate;
-            this.paymentStartDate = paymentStartDate;
-        }
-
-        public string Name()
-        {
-            return "Foo Bar";
+            Name = name;
+            PayPeriod = payPeriod;
+            GrossIncome = grossIncome;
+            IncomeTax = incomeTax;
+            NetIncome = netIncome;
+            Super = super;
         }
     }
 }
