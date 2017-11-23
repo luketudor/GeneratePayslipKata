@@ -38,7 +38,7 @@ namespace PayslipGenerator
 
         public double NetIncome(double grossIncome, double incomeTax)
         {
-            return grossIncome - incomeTax;
+            return Math.Round(grossIncome - incomeTax);
         }
 
         public double Super(double grossIncome, double superRate)
