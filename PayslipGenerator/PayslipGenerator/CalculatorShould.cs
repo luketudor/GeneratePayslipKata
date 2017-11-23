@@ -32,7 +32,7 @@ namespace PayslipGenerator.Tests
         }
 
         [Test]
-        public void ReturnRoundedDownGrossIncomeForSalaryTenThousand()
+        public void ReturnRoundedDownGrossIncome()
         {
             var annualSalary = 10000;
             var numberOfMonths = 12;
@@ -45,7 +45,7 @@ namespace PayslipGenerator.Tests
         }
 
         [Test]
-        public void ReturnRoundedUpGrossIncomeForSalarySeven()
+        public void ReturnRoundedUpGrossIncome()
         {
             var annualSalary = 7;
             var numberOfMonths = 12;
@@ -113,7 +113,7 @@ namespace PayslipGenerator.Tests
         }
 
         [Test]
-        public void ReturnRoundedIncomeTaxForGrossOneTwoThreeFourFiveSix()
+        public void ReturnRoundedIncomeTax()
         {
             var grossIncome = 123456;
             var calculator = new Calculator();
@@ -149,7 +149,7 @@ namespace PayslipGenerator.Tests
         }
 
         [Test]
-        public void ReturnSuperForRandomGross()
+        public void ReturnRoundedUpSuper()
         {
             var grossIncome = 4735;
             var superRate = 0.1226;
@@ -162,7 +162,7 @@ namespace PayslipGenerator.Tests
         }
 
         [Test]
-        public void ReturnRoundedDownSuperForRandomGross()
+        public void ReturnRoundedDownSuper()
         {
             var grossIncome = 12944;
             var superRate = 0.0765;
