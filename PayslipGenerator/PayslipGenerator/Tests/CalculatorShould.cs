@@ -59,69 +59,74 @@ namespace PayslipGenerator.Tests
         [Test]
         public void ReturnIncomeTaxForFirstTaxBracket()
         {
-            var grossIncome = 10000;
+            var annualSalary = 10000;
+            var numberOfMonths = 12;
             var calculator = new Calculator();
 
             var expectedTax = 0;
 
-            Assert.AreEqual(expectedTax, calculator.IncomeTax(grossIncome));
+            Assert.AreEqual(expectedTax, calculator.IncomeTax(annualSalary, numberOfMonths));
         }
 
         [Test]
         public void ReturnIncomeTaxForSecondTaxBracket()
         {
-            var grossIncome = 20000;
+            var annualSalary = 20000;
+            var numberOfMonths = 12;
             var calculator = new Calculator();
 
-            var expectedTax = 342;
+            var expectedTax = 29;
 
-            Assert.AreEqual(expectedTax, calculator.IncomeTax(grossIncome));
+            Assert.AreEqual(expectedTax, calculator.IncomeTax(annualSalary, numberOfMonths));
         }
 
         [Test]
         public void ReturnIncomeTaxForThirdTaxBracket()
         {
-            var grossIncome = 40000;
+            var annualSalary = 40000;
+            var numberOfMonths = 12;
             var calculator = new Calculator();
 
-            var expectedTax = 4547;
+            var expectedTax = 379;
 
-            Assert.AreEqual(expectedTax, calculator.IncomeTax(grossIncome));
+            Assert.AreEqual(expectedTax, calculator.IncomeTax(annualSalary, numberOfMonths));
         }
 
         [Test]
         public void ReturnIncomeTaxForFourthTaxBracket()
         {
-            var grossIncome = 90000;
+            var annualSalary = 90000;
+            var numberOfMonths = 12;
             var calculator = new Calculator();
 
-            var expectedTax = 21247;
+            var expectedTax = 1771;
 
-            Assert.AreEqual(expectedTax, calculator.IncomeTax(grossIncome));
+            Assert.AreEqual(expectedTax, calculator.IncomeTax(annualSalary, numberOfMonths));
         }
 
         [Test]
         public void ReturnIncomeTaxForFifthTaxBracket()
         {
-            var grossIncome = 200000;
+            var annualSalary = 200000;
+            var numberOfMonths = 12;
             var calculator = new Calculator();
 
-            var expectedTax = 63547;
+            var expectedTax = 5296;
 
-            Assert.AreEqual(expectedTax, calculator.IncomeTax(grossIncome));
+            Assert.AreEqual(expectedTax, calculator.IncomeTax(annualSalary, numberOfMonths));
         }
 
-        [Test]
-        public void ReturnRoundedUpIncomeTax()
-        {
-            var grossIncome = 123456;
-            var calculator = new Calculator();
+        //[Test]
+        //public void ReturnRoundedUpIncomeTax()
+        //{
+        //    var annualSalary = 123456;
+        //    var calculator = new Calculator();
 
-            // 33625.72 to be exact
-            var expectedTax = 33626;
+        //    // 33625.72 to be exact
+        //    var expectedTax = 33626;
 
-            Assert.AreEqual(expectedTax, calculator.IncomeTax(grossIncome));
-        }
+        //    Assert.AreEqual(expectedTax, calculator.IncomeTax(annualSalary));
+        //}
 
         [Test]
         public void ReturnNetIncomeForGrossTwoThousand()

@@ -49,8 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
-    <Compile Include="Payslip.cs" />
-    <Compile Include="Tests\PayslipShould.cs" />
     <Compile Include="Tests\CalculatorShould.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
