@@ -33,7 +33,7 @@ namespace PayslipGenerator
             {
                 tax = (annualSalary - 180000) * 0.45 + 54547;
             }
-            return Math.Round(tax / 12, MidpointRounding.AwayFromZero);
+            return Math.Round(tax / numberOfPaySections, MidpointRounding.AwayFromZero);
         }
 
         public double NetIncome(double grossIncome, double incomeTax)

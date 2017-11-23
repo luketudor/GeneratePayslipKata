@@ -37,7 +37,6 @@ namespace PayslipGenerator.Tests
             var numberOfMonths = 12;
             var calculator = new Calculator();
 
-            // 833.33333 to be more precise
             var expectedIncome = 833;
 
             Assert.AreEqual(expectedIncome, calculator.GrossIncome(annualSalary, numberOfMonths));
@@ -50,7 +49,6 @@ namespace PayslipGenerator.Tests
             var numberOfMonths = 12;
             var calculator = new Calculator();
 
-            // 0.5833333 to be more precise
             var expectedIncome = 1;
 
             Assert.AreEqual(expectedIncome, calculator.GrossIncome(annualSalary, numberOfMonths));
@@ -115,18 +113,6 @@ namespace PayslipGenerator.Tests
 
             Assert.AreEqual(expectedTax, calculator.IncomeTax(annualSalary, numberOfMonths));
         }
-
-        //[Test]
-        //public void ReturnRoundedUpIncomeTax()
-        //{
-        //    var annualSalary = 123456;
-        //    var calculator = new Calculator();
-
-        //    // 33625.72 to be exact
-        //    var expectedTax = 33626;
-
-        //    Assert.AreEqual(expectedTax, calculator.IncomeTax(annualSalary));
-        //}
 
         [Test]
         public void ReturnNetIncomeForGrossTwoThousand()
