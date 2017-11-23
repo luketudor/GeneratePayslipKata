@@ -5,9 +5,9 @@ namespace PayslipGenerator
     public class Calculator
     {
 
-        public double GrossIncome(double annualSalary, double numberOfMonths)
+        public double GrossIncome(double annualSalary, double numberOfPaySections)
         {
-            return Math.Round(annualSalary / numberOfMonths);
+            return Math.Round(annualSalary / numberOfPaySections);
         }
 
         public double IncomeTax(double grossIncome)
