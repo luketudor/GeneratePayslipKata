@@ -113,7 +113,7 @@ namespace PayslipGenerator.Tests
         }
 
         [Test]
-        public void ReturnRoundedIncomeTax()
+        public void ReturnRoundedUpIncomeTax()
         {
             var grossIncome = 123456;
             var calculator = new Calculator();
