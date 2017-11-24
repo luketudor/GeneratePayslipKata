@@ -1,6 +1,6 @@
 ﻿namespace PayslipGenerator
 {
-    public class Employee
+    public class EmployeeDetails
     {
         public string FirstName { get; }
         public string LastName { get; }
@@ -8,7 +8,7 @@
         public double SuperRate { get; }
         public string PaymentStartDate { get; }
 
-        public Employee(string firstName, string lastName, int annualSalary, double superRate, string paymentStartDate)
+        public EmployeeDetails(string firstName, string lastName, int annualSalary, double superRate, string paymentStartDate)
         {
             FirstName = firstName;
             LastName = lastName;

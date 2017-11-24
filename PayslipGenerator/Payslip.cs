@@ -1,4 +1,5 @@
-﻿namespace PayslipGenerator
+﻿
+namespace PayslipGenerator
 {
     public class Payslip
     {
