@@ -1,4 +1,4 @@
-﻿namespace PayslipGenerator.Tests
+﻿namespace PayslipGenerator
 {
     public class Payslip
     {
