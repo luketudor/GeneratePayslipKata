@@ -16,5 +16,15 @@
             SuperRate = superRate;
             PaymentStartDate = paymentStartDate;
         }
+
+        public override bool Equals(object obj)
+        {
+            var other = (EmployeeDetails)obj;
+            return FirstName.Equals(other.FirstName) &&
+                LastName.Equals(other.LastName) &&
+                AnnualSalary.Equals(other.AnnualSalary) &&
+                SuperRate.Equals(other.SuperRate) &&
+                PaymentStartDate.Equals(other.PaymentStartDate);
+        }
     }
 }
