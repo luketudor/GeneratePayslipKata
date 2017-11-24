@@ -19,5 +19,15 @@ namespace PayslipGenerator
             NetIncome = netIncome;
             Super = super;
         }
+
+        public override bool Equals(object obj)
+        {
+            var other = (Payslip)obj;
+            return Name.Equals(other.Name) &&
+                PayPeriod.Equals(other.PayPeriod) &&
+                GrossIncome.Equals(other.GrossIncome) &&
+                IncomeTax.Equals(other.IncomeTax) &&
+                Super.Equals(other.Super);
+        }
     }
 }
