@@ -145,7 +145,6 @@ namespace PayslipGenerator.Tests
             var superRate = 0.1226;
             var calculator = new Calculator();
 
-            // 580.511 to be exact
             var expectedIncome = 581;
 
             Assert.AreEqual(expectedIncome, calculator.Super(grossIncome, superRate));
@@ -158,7 +157,6 @@ namespace PayslipGenerator.Tests
             var superRate = 0.0765;
             var calculator = new Calculator();
 
-            // 990.216 to be exact
             var expectedIncome = 990;
 
             Assert.AreEqual(expectedIncome, calculator.Super(grossIncome, superRate));

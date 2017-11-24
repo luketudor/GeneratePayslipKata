@@ -6,7 +6,7 @@ namespace PayslipGenerator.Tests
     public class PayslipMakerShould
     {
         [Test]
-        public void ReturnsOutputPayslipForDavid()
+        public void ReturnOutputPayslipForDavid()
         {
             var details = "David,Rudd,60050,9%,01 March – 31 March";
             var payslipMaker = new PayslipMaker(',', new Calculator());
@@ -17,7 +17,7 @@ namespace PayslipGenerator.Tests
         }
 
         [Test]
-        public void ReturnsOutputPayslipForRyan()
+        public void ReturnOutputPayslipForRyan()
         {
             var details = "Ryan,Chen,120000,10%,01 March – 31 March";
             var payslipMaker = new PayslipMaker(',', new Calculator());
