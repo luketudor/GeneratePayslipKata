@@ -7,7 +7,7 @@ namespace PayslipGenerator
         static void Main(string[] args)
         {
             var payslipMaker = new PayslipMaker(new Calculator());
-            var payslipFormatter = new PayslipAdapter(',');
+            var payslipFormatter = new PayslipParser(',');
 
             while(true)
             {

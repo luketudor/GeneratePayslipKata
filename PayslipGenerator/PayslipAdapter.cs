@@ -1,11 +1,11 @@
 ﻿
 namespace PayslipGenerator
 {
-    class PayslipAdapter
+    class PayslipParser
     {
         private char separator;
 
-        public PayslipAdapter(char fieldSeparator)
+        public PayslipParser(char fieldSeparator)
         {
             separator = fieldSeparator;
         }
