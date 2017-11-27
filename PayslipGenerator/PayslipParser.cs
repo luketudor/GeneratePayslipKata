@@ -1,18 +1,17 @@
-﻿
-namespace PayslipGenerator
+﻿namespace PayslipGenerator
 {
-    class PayslipParser
+    public class PayslipParser
     {
-        private char separator;
+        private readonly char _separator;
 
         public PayslipParser(char fieldSeparator)
         {
-            separator = fieldSeparator;
+            _separator = fieldSeparator;
         }
 
         public EmployeeDetails ParseEmployee(string employeeDetails)
         {
-            var inputFields = employeeDetails.Split(separator);
+            var inputFields = employeeDetails.Split(_separator);
             var firstName = inputFields[0];
             var lastName = inputFields[1];
             var annualSalary = int.Parse(inputFields[2]);
@@ -24,7 +23,7 @@ namespace PayslipGenerator
 
         public string Format(Payslip payslip)
         {
-            return string.Join(separator.ToString(),
+            return string.Join(_separator.ToString(),
                 payslip.Name,
                 payslip.PayPeriod,
                 payslip.GrossIncome,

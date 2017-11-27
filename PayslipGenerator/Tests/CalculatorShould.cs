@@ -11,7 +11,7 @@ namespace PayslipGenerator.Tests
         {
             var annualSalary = 12000;
             var numberOfMonths = 12;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedIncome = 1000;
 
@@ -23,7 +23,7 @@ namespace PayslipGenerator.Tests
         {
             var annualSalary = 24000;
             var numberOfMonths = 12;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedIncome = 2000;
 
@@ -35,7 +35,7 @@ namespace PayslipGenerator.Tests
         {
             var annualSalary = 10000;
             var numberOfMonths = 12;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedIncome = 833;
 
@@ -47,7 +47,7 @@ namespace PayslipGenerator.Tests
         {
             var annualSalary = 7;
             var numberOfMonths = 12;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedIncome = 1;
 
@@ -59,7 +59,7 @@ namespace PayslipGenerator.Tests
         {
             var annualSalary = 10000;
             var numberOfMonths = 12;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedTax = 0;
 
@@ -71,7 +71,7 @@ namespace PayslipGenerator.Tests
         {
             var annualSalary = 20000;
             var numberOfMonths = 12;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedTax = 29;
 
@@ -83,7 +83,7 @@ namespace PayslipGenerator.Tests
         {
             var annualSalary = 40000;
             var numberOfMonths = 12;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedTax = 379;
 
@@ -95,7 +95,7 @@ namespace PayslipGenerator.Tests
         {
             var annualSalary = 90000;
             var numberOfMonths = 12;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedTax = 1771;
 
@@ -107,7 +107,7 @@ namespace PayslipGenerator.Tests
         {
             var annualSalary = 200000;
             var numberOfMonths = 12;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedTax = 5296;
 
@@ -119,7 +119,7 @@ namespace PayslipGenerator.Tests
         {
             var grossIncome = 2000;
             var incomeTax = 500;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedIncome = 1500;
 
@@ -131,7 +131,7 @@ namespace PayslipGenerator.Tests
         {
             var grossIncome = 54321;
             var incomeTax = 14417;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedIncome = 39904;
 
@@ -143,7 +143,7 @@ namespace PayslipGenerator.Tests
         {
             var grossIncome = 4735;
             var superRate = 0.1226;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedIncome = 581;
 
@@ -155,7 +155,7 @@ namespace PayslipGenerator.Tests
         {
             var grossIncome = 12944;
             var superRate = 0.0765;
-            var calculator = new Calculator();
+            var calculator = new Calculator(new DefaultTaxTable());
 
             var expectedIncome = 990;
 

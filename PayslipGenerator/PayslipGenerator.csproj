@@ -49,9 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="DefaultTaxTable.cs" />
     <Compile Include="EmployeeDetails.cs" />
+    <Compile Include="ITaxTable.cs" />
     <Compile Include="Payslip.cs" />
-    <Compile Include="PayslipAdapter.cs" />
+    <Compile Include="PayslipParser.cs" />
     <Compile Include="Tests\CalculatorShould.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

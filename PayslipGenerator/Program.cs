@@ -2,11 +2,11 @@
 
 namespace PayslipGenerator
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var payslipMaker = new PayslipMaker(new Calculator());
+            var payslipMaker = new PayslipMaker(new Calculator(new DefaultTaxTable()));
             var payslipFormatter = new PayslipParser(',');
 
             while(true)

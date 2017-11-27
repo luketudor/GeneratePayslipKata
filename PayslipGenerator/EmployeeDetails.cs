@@ -1,4 +1,6 @@
-﻿namespace PayslipGenerator
+﻿using System;
+
+namespace PayslipGenerator
 {
     public class EmployeeDetails
     {
@@ -19,12 +21,23 @@
 
         public override bool Equals(object obj)
         {
+            if (obj == null)
+            {
+                return false;
+            }
+
             var other = (EmployeeDetails)obj;
+
             return FirstName.Equals(other.FirstName) &&
                 LastName.Equals(other.LastName) &&
                 AnnualSalary.Equals(other.AnnualSalary) &&
                 SuperRate.Equals(other.SuperRate) &&
                 PaymentStartDate.Equals(other.PaymentStartDate);
+        }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
         }
     }
 }
